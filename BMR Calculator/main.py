@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     #test = 'index page loaded'
-    buttoninfo = 'Calculate BMR'
+    buttoninfo = 'Calculate Your BMR'
     
     return render_template('index.html', buttoninfo = buttoninfo)#, gendervalue = gendervalue)#, test=test)
 
