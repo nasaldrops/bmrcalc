@@ -10,9 +10,7 @@
             <p></p>
 
             <div><label for="gender">Choose Gender:</label>
-            <select name="gender" value ="gender">
-            
-           
+            <select name="gender" value ="gender">         
             <option value="1">Male</option>
             <option value="2">Female</option>
             </select></div>
@@ -23,7 +21,7 @@
             <div><input name = "weight" value = '{{yourweight}}'></input></div>
             <div><label for="height">Enter your height (in cm):</label></div>
             <div><input name = "height" value = '{{yourheight}}'></input></div>
-            <p>{{weightinlbs}}</p>
+            <p>{{weightinlbs}}{{weightlbs}}</p>
             <button class = 'btn btn-success'>{{buttoninfo}}</button>
             <!--</p>{{yourage}}</p>
             <p>Your Weight:{{yourweight}}</p>

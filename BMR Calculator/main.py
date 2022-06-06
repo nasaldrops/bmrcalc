@@ -23,8 +23,10 @@ def bmrcalc():
         gender = request.form['gender']
         htmlinfo = 'Your BMR is: '
         print(genderselected)
-        lbs = round(weight * 2.20462)
-        weightinlbs = 'Your weight in lbs: ', lbs
+        weightlbs = round(weight * 2.20462)
+        weightinlbs = 'Your weight in lbs: '
+        
+        
         
         
         if gender == '1':
@@ -37,7 +39,7 @@ def bmrcalc():
             bmrstr = 'Your BMR is: ' + str(bmr)
             print(genderselected)
                
-        return render_template('index.html', htmlinfo = htmlinfo, buttoninfo = bmrstr, yourbmr = bmr, yourage = age, yourweight = weight, gender = gender, yourheight = height,genderselected=genderselected, weightinlbs = weightinlbs)#, gendervalue = gendervalue)
+        return render_template('index.html', htmlinfo = htmlinfo, buttoninfo = bmrstr, yourbmr = bmr, yourage = age, yourweight = weight, gender = gender, yourheight = height,genderselected=genderselected, weightinlbs = weightinlbs, weightlbs = weightlbs)#, gendervalue = gendervalue)
     
 
 
