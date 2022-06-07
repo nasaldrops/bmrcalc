@@ -11,7 +11,7 @@ def home():
     return render_template('index.html', buttoninfo = buttoninfo)#, gendervalue = gendervalue)#, test=test)
 
 
-#When button is pressed, request.form kicks into action. In this instacnce the app looks to see what the gender is. It looks to see if gender is true, then it strips out the
+#When button is pressed, request.form kicks into action. In this instance the app looks to see what the gender is. It looks to see if gender is true, then it strips out the
 #values from the corresponding input boxes.
 @app.route('/', methods = ['POST'])
 def bmrcalc():
@@ -43,7 +43,7 @@ def bmrcalc():
         else:
             bmr = round(447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age))
             bmrstr = 'Your BMR is: ' + str(bmr)
-            print(genderselected)
+            
                
         return render_template('index.html', htmlinfo = htmlinfo, buttoninfo = bmrstr, yourbmr = bmr, yourage = age, yourweight = weight, gender = gender, yourheight = height,genderselected=genderselected, weightinlbs = weightinlbs, weightlbs = weightlbs)#, gendervalue = gendervalue)
     except:
@@ -55,4 +55,4 @@ def bmrcalc():
 if __name__== '__main__':
     
     app.run() 
-    #app.run(host='192.168.1.5', port=5000) #running on RPi
+    
