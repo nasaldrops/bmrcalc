@@ -12,7 +12,7 @@ def home():
 
 
 #When button is pressed, request.form kicks into action. In this instacnce the app looks to see what the gender is. It looks to see if gender is true, then it strips out the
-#values from the corresponding input boxes. Removed GET from methods app route.
+#values from the corresponding input boxes. Removed GET from methods app route &&
 @app.route('/', methods = ['POST'])
 def bmrcalc():
     try:
