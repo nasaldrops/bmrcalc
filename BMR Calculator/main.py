@@ -15,20 +15,26 @@ def home():
 #values from the corresponding input boxes.
 @app.route('/', methods = ['GET','POST'])
 def bmrcalc():
-    if "gender" in request.form:
-        genderselected = request.form.get('gender')
-        age = float(request.form['age'])
-        weight = float(request.form['weight'])
-        height = float(request.form['height'])
-        gender = request.form['gender']
-        htmlinfo = 'Your BMR is: '
-        print(genderselected)
-        weightlbs = round(weight * 2.20462)
-        weightinlbs = 'Your weight in lbs: '
+    try:
+
+        if "gender" in request.form:
+
+    
+            genderselected = request.form.get('gender')
+            age = float(request.form['age'])
+            weight = float(request.form['weight'])
+            height = float(request.form['height'])
+            gender = request.form['gender']
+            htmlinfo = 'Your BMR is: '
+            print(genderselected)
+            weightlbs = round((weight * 2.20462),2)
+            weightinlbs = 'Your weight in lbs: '
+    except:
+        pass
+  
         
         
-        
-        
+    try:    
         if gender == '1':
             bmr = round(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
             bmrstr = 'Your BMR is: ' + str(bmr)
@@ -40,7 +46,9 @@ def bmrcalc():
             print(genderselected)
                
         return render_template('index.html', htmlinfo = htmlinfo, buttoninfo = bmrstr, yourbmr = bmr, yourage = age, yourweight = weight, gender = gender, yourheight = height,genderselected=genderselected, weightinlbs = weightinlbs, weightlbs = weightlbs)#, gendervalue = gendervalue)
-    
+    except:
+        buttoninfo = 'Enter Valid Inputs'
+        return render_template('index.html', buttoninfo = buttoninfo)#, gendervalue = gendervalue)#, test=test)
 
 
 
