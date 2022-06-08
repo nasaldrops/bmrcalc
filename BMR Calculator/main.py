@@ -5,10 +5,10 @@ app = Flask(__name__)
 #This loads the very first page as if visiting the website for the first time.
 @app.route('/')
 def home():
-    #test = 'index page loaded'
+    
     buttoninfo = 'Calculate Your BMR'
     
-    return render_template('index.html', buttoninfo = buttoninfo)#, gendervalue = gendervalue)#, test=test)
+    return render_template('index.html', buttoninfo = buttoninfo)
 
 
 #When button is pressed, request.form kicks into action. In this instance the app looks to see what the gender is. It looks to see if gender is true, then it strips out the
@@ -48,7 +48,7 @@ def bmrcalc():
         return render_template('index.html', htmlinfo = htmlinfo, buttoninfo = bmrstr, yourbmr = bmr, yourage = age, yourweight = weight, gender = gender, yourheight = height,genderselected=genderselected, weightinlbs = weightinlbs, weightlbs = weightlbs)#, gendervalue = gendervalue)
     except:
         buttoninfo = 'Enter Valid Inputs'
-        return render_template('index.html', buttoninfo = buttoninfo)#, gendervalue = gendervalue)#, test=test)
+        return render_template('index.html', buttoninfo = buttoninfo)
 
 
 
