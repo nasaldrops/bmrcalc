@@ -37,7 +37,7 @@ def bmrcalc():
     try:    
         if gender == '1':
             bmr = round(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
-            bmrstr = 'Your BMR is: ' + str(bmr)
+            bmrstr = 'Your BMR number is: ' + str(bmr)
             print(genderselected)
                  
         else:
