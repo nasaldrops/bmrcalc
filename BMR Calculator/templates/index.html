@@ -1,0 +1,36 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+<div class = 'container'>
+
+    <!--- the reason why the results appear in the input boxes after submission is due to the """{ { } } """ tags as values in the form.-->
+
+    <form method = 'POST'>
+        <div>
+            <p></p>
+
+            <div><label for="gender">Choose Your Gender:</label>
+            <select name="gender" value ="gender">         
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            </select></div>
+            <p></p>
+            <div><label for="age">Enter your age:</label></div>
+            <div><input name = "age" value = '{{yourage}}'></input></div>
+            <div><label for="weight">Enter your weight (in KG):</label></div>
+            <div><input name = "weight" value = '{{yourweight}}'></input></div>
+            <div><label for="height">Enter your height (in cm):</label></div>
+            <div><input name = "height" value = '{{yourheight}}'></input></div>
+            <p>{{weightinlbs}}{{weightlbs}}</p>
+            <button class = 'btn btn-success'>{{buttoninfo}}</button>
+            <!--</p>{{yourage}}</p>
+            <p>Your Weight:{{yourweight}}</p>
+            <p>Your Height:{{yourheight}}</p>
+            <p>Your gender: {{gender}}</p>
+            <h3>{{htmlinfo}} {{yourbmr}}</h3>-->
+            <p></p>
+            <p></p>
+            
+            <p>{{test}}</p>
+        </div>
+    </form>
