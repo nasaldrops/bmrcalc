@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
-import flask
 
-print(flask.__version__)
 app = Flask(__name__)
 
 #This loads the very first page as if visiting the website for the first time.
